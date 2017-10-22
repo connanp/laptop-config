@@ -1,0 +1,12 @@
+repo id                    repo name                                      status
+bumblebee                  bumblebee for fedora Linux 26 - x86_64 - Base      28
+bumblebee-nonfree          bumblebee nonfree for fedora Linux 26 - x86_64     38
+*fedora                    Fedora 26 - x86_64                             53,912
+hardware_razer             hardware:razer (Fedora_26)                         16
+playonlinux                PlayOnLinux Official repository                    48
+*rpmfusion-free            RPM Fusion for Fedora 26 - Free                   536
+*rpmfusion-free-updates    RPM Fusion for Fedora 26 - Free - Updates         172
+*rpmfusion-nonfree         RPM Fusion for Fedora 26 - Nonfree                202
+*rpmfusion-nonfree-updates RPM Fusion for Fedora 26 - Nonfree - Updates       38
+*updates                   Fedora 26 - x86_64 - Updates                    9,791
+virtio-win-stable          virtio-win builds roughly matching what was sh      5

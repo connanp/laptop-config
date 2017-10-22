@@ -1,0 +1,22 @@
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+
+# addresses `lspci` freeze
+# https://github.com/Bumblebee-Project/Bumblebee/issues/764#issuecomment-234494238
+bb_acpi_fix="acpi_osi=! acpi_osi=\"Windows 2009\""
+
+# for HVM passthrough
+iommu="iommu=1 intel_iommu=on"
+
+# fix suspend loop when closing/opening lid
+suspend_loop_fix="button.lid_init_state=open"
+
+GRUB_CMDLINE_LINUX="rd.luks.uuid=luks-d55b9af2-6c50-40a7-ba86-d37e121c7d18 rd.lvm.lv=vg0/root rd.lvm.lv=vg0/swap $suspend_loop_fix $iommu $bb_acpi_fix rhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+
+# allows user to control default along with edits in /etc/sysconfig/kernel
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=false
